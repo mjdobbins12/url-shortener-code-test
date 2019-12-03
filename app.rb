@@ -17,7 +17,7 @@ class UrlShortener < Sinatra::Base
 	
 	post '/url' do
 		sh = Shortener.shorten(params[:url].to_s)
-		{ sh[0] => sh[1] }.to_json
+		{ :short_url => sh[0], :url => sh[1] }.to_json
 		redirect to('/')
 	end
 	

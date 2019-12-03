@@ -4,10 +4,10 @@
 <input type='submit' value='submit'>
 </form>
 
-<p>Your previously created links will appear below. Add the 8-letter mini-URL to 'localhost:8080/' to open a link in a new tab</p>
+<p>Any links created earlier in this session will appear below. Add the 8-letter identifier to this page's URL to find what you're looking for.</p>
 
 <ul>
   <% Shortener.display_urls.each do |short_url, long_url| %>
-    <li> <%= short_url %>: <a href=<%= long_url %>><%= long_url %></a></li>
+    <li> <%= short_url %>: <a href=<%= long_url %> target='_blank'><%= long_url %></a></li>
   <% end %>
 </ul>
