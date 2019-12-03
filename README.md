@@ -48,18 +48,9 @@ Bonus points:
   frontend that can create and display shortened URLs without reloading the
   page.
 
-## Submission
+## To run
 
-Please clone this repository, write some code and update this README with a
-guide of how to run it.
-
-Either send us a link to the repository on somewhere like github or bitbucket
-(bitbucket has free private repositories) or send us a git bundle.
-
-    git bundle create yournamehere-url-shortener-test.bundle master
-
-And send us the resulting `yournamehere-url-shortener-test.bundle` file.
-
-This `.bundle` file can be cloned using:
-
-    git bundle clone bundle-filename.bundle -b master directory-name
+1. Clone this repository
+2. Run ```bundle install``` to get the necessary gems
+3. Fire up Sinatra with ```ruby app.rb```
+4. Enter a URL to be shortened in the command line: for example ```curl localhost:4567 -XPOST -d '{ "url": "http://www.farmdrop.com" }'```. Or visit localhost:4567 in a browser, which will display a list of shortened links (if any) from the same session.
